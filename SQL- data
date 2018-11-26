@@ -1,0 +1,176 @@
+CREATE USER IF NOT EXISTS 'Admin_hyresforeningen'@'localhost' IDENTIFIED BY 'Admin_hyresforeningen';
+
+GRANT ALL PRIVILEGES ON * . * TO 'Admin_hyresforeningen'@'localhost';
+
+
+CREATE DATABASE  IF NOT EXISTS Hyresforeningen;
+USE Hyresforeningen;
+
+DROP TABLE IF EXISTS Tenant;
+
+CREATE TABLE Tenant (
+id int NOT NULL AUTO_INCREMENT,
+apartmentNumber int,
+firstName varchar(45),
+lastName varchar(45),
+ss_number varchar(16),
+mobile varchar(15),
+email varchar(45),
+_from varchar(12),
+_until varchar(12),
+notes varchar (100),
+  PRIMARY KEY (`id`)
+);
+
+
+INSERT INTO Tenant (apartmentNumber , firstName, lastName, ss_number, mobile, email, _from, _until, notes) values ( 1, 'Samuel', 'Nilsson', '760113-6821', '070-333 44 55', 'Samuel_Nilsson@hotmail.com', '2007-01-01' , '2009-01-01', "");
+INSERT INTO Tenant (apartmentNumber , firstName, lastName, ss_number, mobile, email, _from, _until, notes)  values ( 2, 'Mikael', 'Yttling', '710529-6160', '073-688 88 59', 'MikkeY@hotmail.com', '2007-01-01' , '2008-06-07', "");
+INSERT INTO Tenant (apartmentNumber , firstName, lastName, ss_number, mobile, email, _from, _until, notes)  values ( 3, 'Sten', 'Stensson', '551230-6570', '073-391 12 21', 'Stensson@gmail.com', '2007-07-01' , '2007-05-20', "");
+INSERT INTO Tenant (apartmentNumber , firstName, lastName, ss_number, mobile, email, _from, _until, notes)  values ( 3, 'Hans', 'Åkeblom', '680112-7777', '070-978 40 30', 'Hasse_Akeblom@sure.me', '2007-06-20' , '2008-01-03', "");
+
+INSERT INTO Tenant (apartmentNumber , firstName, lastName, ss_number, mobile, email, _from, _until, notes) values ( 1, 'Fredrik', 'Bertilsson', '720111-7823', '070-222 89 14', 'FreBer@hotmail.com', '2009-01-02' , '2013-04-19', "");
+INSERT INTO Tenant (apartmentNumber , firstName, lastName, ss_number, mobile, email, _from, _until, notes)  values ( 2, 'Lars', 'Larson', '720429-7861', '073-300 82 51', 'Lars_L@hotmail.com', '2008-06-08' , '2011-01-19', "");
+INSERT INTO Tenant (apartmentNumber , firstName, lastName, ss_number, mobile, email, _from, _until, notes)  values ( 3, 'Ida-Marie', 'Stark', '710830-7872', '073-121 78 66', 'I_M@gmail.com', '2008-01-04' , '2008-03-29', "");
+INSERT INTO Tenant (apartmentNumber , firstName, lastName, ss_number, mobile, email, _from, _until, notes)  values ( 4, 'Tilde', 'Afmark', '661107-7846', '070-454 72 17', 'Tilde_A@hotmail.com', '2007-01-01' , '2013-05-21', "");
+INSERT INTO Tenant (apartmentNumber , firstName, lastName, ss_number, mobile, email, _from, _until, notes)  values ( 4, 'Urban', 'Vasa', '671001-7817',  '073-313 19 12', 'Urban_Vasa@hotmail.com', '2007-01-01' , '2013-05-21', "");
+INSERT INTO Tenant (apartmentNumber , firstName, lastName, ss_number, mobile, email, _from, _until, notes)  values ( 5, 'Valdemar', 'Henemark', '731230-7713', '070-854 09 67', 'Val_Hen@gmail.com', '2007-01-01' , '2016-11-19', "");
+INSERT INTO Tenant (apartmentNumber , firstName, lastName, ss_number, mobile, email, _from, _until, notes)  values ( 5, 'Kristina', 'Stavman', '710412-7114', '070-976 71 99', 'Kristen@hotmail.com', '2007-01-01' , '2016-11-29', "");
+INSERT INTO Tenant (apartmentNumber , firstName, lastName, ss_number, mobile, email, _from, _until, notes)  values ( 6, 'Stefan', 'Wennberg', '610201-7809', '070-434 91 81', 'Stefan_Wennberg@work.com', '2007-01-01' , '1998-11-31', "");
+INSERT INTO Tenant (apartmentNumber , firstName, lastName, ss_number, mobile, email, _from, _until, notes) values ( 7, 'Gustaf', 'Johansson', '640122-7813', '073-981 77 43', 'Gustaf_Johansson@hotmail.com', '2007-01-01' , '2011-01-19', "");
+INSERT INTO Tenant (apartmentNumber , firstName, lastName, ss_number, mobile, email, _from, _until, notes) values ( 8, 'Vilde', 'Varberg', '620321-7710', '070-983 52 47', 'Vilde_V@hotmail.com', '2007-01-01' , '2007-01-19', "");
+INSERT INTO Tenant (apartmentNumber , firstName, lastName, ss_number, mobile, email, _from, _until, notes) values ( 8, 'Rolf', 'Nilsson', '641023-8013', '070-549 99 89', 'Rolf_N@hotmail.com', '2008-01-01' , '2011-06-17', "");
+INSERT INTO Tenant (apartmentNumber , firstName, lastName, ss_number, mobile, email, _from, _until, notes) values ( 9, 'Jerry', 'Williams', '681201-7617', '070-341 14 01', 'Jerry_W@gmail.com', '2007-01-01' , '2017-04-30', "");
+INSERT INTO Tenant (apartmentNumber , firstName, lastName, ss_number, mobile, email, _from, _until, notes) values ( 9, 'Ture', 'Stenmark', '811211-7017', '070-129 22 00', 'Ture_Stenmark@hotmail.com', '2007-01-01' , '2016-05-11', "");
+INSERT INTO Tenant (apartmentNumber , firstName, lastName, ss_number, mobile, email, _from, _until, notes) values ( 10, 'Greta', 'Ek', '570211-7612', '073-898 32 32', 'Greata_Ek@home.me', '2007-01-01' , '2015-05-12', "");
+
+INSERT INTO Tenant (apartmentNumber , firstName, lastName, ss_number, mobile, email, _from, _until, notes) values ( 21, 'Gustav', 'Johansson', '640122-7823', '070-981 77 44', 'Gustaf_Johansson@hotmail.com', '2007-01-01' , '2018-01-19', "");
+INSERT INTO Tenant (apartmentNumber , firstName, lastName, ss_number, mobile, email, _from, _until, notes) values ( 27, 'Kurre', 'Varberg', '610321-7730', '073-983 52 48', 'Kurre@hotmail.com', '2007-01-01' , '2018-01-19', "");
+INSERT INTO Tenant (apartmentNumber , firstName, lastName, ss_number, mobile, email, _from, _until, notes) values ( 28, 'Nils', 'Nilsson', '671023-8063', '073-549 99 80', 'Nils@hotmail.com', '2008-01-01' , '2018-06-17', "");
+INSERT INTO Tenant (apartmentNumber , firstName, lastName, ss_number, mobile, email, _from, _until, notes) values ( 28, 'Aida', 'Williams', '671201-7697', '073-341 14 02', 'Aida@gmail.com', '2007-01-01' , '2018-04-30', "");
+INSERT INTO Tenant (apartmentNumber , firstName, lastName, ss_number, mobile, email, _from, _until, notes) values ( 29, 'Emil', 'Stenmark', '801211-7027', '073-129 22 01', 'Emil@hotmail.com', '2007-01-01' , '2018-05-11', "");
+INSERT INTO Tenant (apartmentNumber , firstName, lastName, ss_number, mobile, email, _from, _until, notes) values ( 30, 'Gretchen', 'Ek', '590211-7652', '070-898 32 32', 'Gretchen@home.me', '2007-01-01' , '2018-05-12', "");
+
+INSERT INTO Tenant (apartmentNumber , firstName, lastName, ss_number, mobile, email, _from, notes)  values ( 2, 'Robert', 'Larson', '820428-8901', '073-322 84 52', 'Robban_L@hotmail.com', '2011-01-20', "");
+INSERT INTO Tenant (apartmentNumber , firstName, lastName, ss_number, mobile, email, _from, notes)  values ( 3, 'Lisa', 'Öman', '790830-8912', '073-121 22 33', 'Lisa_Öman@gmail.com', '2008-03-30', "Ansvarig för nyckel till hobbyrummet");
+INSERT INTO Tenant (apartmentNumber , firstName, lastName, ss_number, mobile, email, _from, notes)  values ( 4, 'Berit', 'Gramner', '680905-8916', '070-424 74 12', 'Berit_GRamner@hotmail.com', '2013-05-22', "");
+INSERT INTO Tenant (apartmentNumber , firstName, lastName, ss_number, mobile, email, _from, notes)  values ( 4, 'Hans', 'Sundvall', '591103-8917',  '073-323 84 34', 'Hasse_S@hotmail.com', '2013-05-22', "");
+INSERT INTO Tenant (apartmentNumber , firstName, lastName, ss_number, mobile, email, _from, notes)  values ( 5, 'Viktor', 'Hansson', '921222-8813', '070-654 32 14', 'Viktory_Hansson@gmail.com', '2016-11-20', "");
+INSERT INTO Tenant (apartmentNumber , firstName, lastName, ss_number, mobile, email, _from, notes)  values ( 5, 'Eva', 'Andersson', '880421-8214', '070-876 54 56', 'Eva_Andersson@hotmail.com', '2016-11-20', "");
+INSERT INTO Tenant (apartmentNumber , firstName, lastName, ss_number, mobile, email, _from, notes)  values ( 6, 'Sture', 'Wennberg', '760219-8909', '070-234 67 16', 'Sture_Wennberg@gmail.com', '2007-01-01', "");
+INSERT INTO Tenant (apartmentNumber , firstName, lastName, ss_number, mobile, email, _from, notes) values ( 7, 'Jonas', 'Johansson', '770114-8913', '073-181 52 52', 'Jonte_J@hotmail.com', '2011-01-20', "");
+INSERT INTO Tenant (apartmentNumber , firstName, lastName, ss_number, mobile, email, _from, notes) values ( 8, 'Viktoria', 'Tillberg', '750322-8810', '070-987 27 15', 'Viktoria_Till@hotmail.com', '2007-01-20', "");
+INSERT INTO Tenant (apartmentNumber , firstName, lastName, ss_number, mobile, email, _from, notes) values ( 8, 'Ralf', 'Stoone', '701223-9023', '070-546 09 12', 'Ralf_Stoone@hotmail.com', '2011-06-18', "");
+INSERT INTO Tenant (apartmentNumber , firstName, lastName, ss_number, mobile, email, _from, notes) values ( 9, 'Sixten', 'Heikinpeti', '881001-8717', '070-343 11 12', 'Sixten_H@gmail.com', '2017-05-01', "");
+INSERT INTO Tenant (apartmentNumber , firstName, lastName, ss_number, mobile, email, _from, notes) values ( 9, 'Kalle', 'Malm', '951111-8117', '070-123 19 12', 'Kalle_Malm@hotmail.com', '2016-05-12', "");
+INSERT INTO Tenant (apartmentNumber , firstName, lastName, ss_number, mobile, email, _from, notes) values ( 10, 'Lena', 'Larsson', '670210-8812', '073-898 89 00', 'Lena_L@hotmail.com', '2015-05-13', "");
+
+
+
+INSERT INTO Tenant (apartmentNumber , firstName, lastName, ss_number, mobile, email, _from, notes)  values ( 22, 'Ior', 'Kempe', '770112-8594', '073-321 12 33', 'Ior@gmail.com', '2016-03-12', "");
+INSERT INTO Tenant (apartmentNumber , firstName, lastName, ss_number, mobile, email, _from, notes)  values ( 23, 'Zara', 'Sundin', '980101-4322', '070-849 74 62', 'Zara_S@hotmail.com', '2016-03-24', "");
+INSERT INTO Tenant (apartmentNumber , firstName, lastName, ss_number, mobile, email, _from, notes)  values ( 24, 'Katarina', 'Zoolander', '800412-0912',  '073-444 56 56', 'Katarina_Zoo@hotmail.com', '2016-03-12', "");
+INSERT INTO Tenant (apartmentNumber , firstName, lastName, ss_number, mobile, email, _from, notes)  values ( 25, 'Tyra', 'Kratz', '910212-2345', '070-984 35 15', 'Tyra_Krantz@gmail.com', '2016-03-12', "");
+INSERT INTO Tenant (apartmentNumber , firstName, lastName, ss_number, mobile, email, _from, notes)  values ( 26, 'Vilma', 'Hansson', '911212-3200', '070-321 33 99', 'Vilma_H@hotmail.com', '2016-03-12', "");
+
+
+INSERT INTO Tenant (apartmentNumber , firstName, lastName, ss_number, mobile, email, _from, notes) values ( 11, 'Robert', 'Berggren', '710111-8765', '070-444 11 11', 'Robban_B@hotmail.com', '2017-05-20', "");
+INSERT INTO Tenant (apartmentNumber , firstName, lastName, ss_number, mobile, email, _from, notes)  values ( 12, 'Mattias', 'Olsson', '760428-6789', '073-222 33 52', 'Mattias_O@hotmail.com', '2017-05-20', "");
+INSERT INTO Tenant (apartmentNumber , firstName, lastName, ss_number, mobile, email, _from, notes)  values ( 13, 'Sara', 'Larsson', '800212-9182', '073-123 12 33', 'Sara_L@gmail.com', '2017-05-20', "");
+INSERT INTO Tenant (apartmentNumber , firstName, lastName, ss_number, mobile, email, _from, notes)  values ( 14, 'Darin', 'Holgersson', '910905-6574', '070-777 74 62', 'Darin_H@hotmail.com', '2017-05-20', "");
+INSERT INTO Tenant (apartmentNumber , firstName, lastName, ss_number, mobile, email, _from, notes)  values ( 14, 'Mona', 'Sundvall', '611103-9283',  '073-565 56 56', 'Mona_Sundvall@hotmail.com', '2017-05-20', "");
+INSERT INTO Tenant (apartmentNumber , firstName, lastName, ss_number, mobile, email, _from, notes)  values ( 15, 'Sture', 'Mattiasson', '901222-9000', '070-775 35 15', 'Sture_M@gmail.com', '2017-05-20', "");
+INSERT INTO Tenant (apartmentNumber , firstName, lastName, ss_number, mobile, email, _from, notes)  values ( 16, 'Eva', 'Larsson', '710421-3782', '070-867 33 99', 'Eva_Larsson@hotmail.com', '2017-05-20', "");
+INSERT INTO Tenant (apartmentNumber , firstName, lastName, ss_number, mobile, email, _from, notes)  values ( 17, 'Sten-Sture', 'Krona', '660219-8711', '070-123 99 76', 'Sten_Sture123@gmail.com', '2017-05-20', "");
+INSERT INTO Tenant (apartmentNumber , firstName, lastName, ss_number, mobile, email, _from, notes) values ( 18, 'Samuel', 'Geirs', '750114-9999', '073-181 44 33', 'Samule_G_75@hotmail.com', '2017-05-20', "");
+INSERT INTO Tenant (apartmentNumber , firstName, lastName, ss_number, mobile, email, _from, notes) values ( 18, 'Rakel', 'Måndotter', '761012-1111', '070-848 84 15', 'Rakel_moon@hotmail.com', '2017-05-20', "");
+INSERT INTO Tenant (apartmentNumber , firstName, lastName, ss_number, mobile, email, _from, notes) values ( 19, 'Mia', 'Sundvall', '891203-1245', '070-654 09 43', 'Mia_S@hotmail.com', '2017-05-20', "");
+INSERT INTO Tenant (apartmentNumber , firstName, lastName, ss_number, mobile, email, _from, notes) values ( 19, 'Martin', 'En', '911001-1672', '070-888 99 12', 'Martin_En@gmail.com', '2017-05-20', "");
+INSERT INTO Tenant (apartmentNumber , firstName, lastName, ss_number, mobile, email, _from, notes) values ( 20, 'Lisa', 'Levander', '841111-8211', '070-235 20 12', 'Lisa_Lev_84@hotmail.com', '2017-06-01', "");
+INSERT INTO Tenant (apartmentNumber , firstName, lastName, ss_number, mobile, email, _from, notes) values ( 20, 'Katja', 'Jama', '832102-9881', '073-982 11 99', 'Katja_Jama@hotmail.com', '2017-06-01', "");
+
+
+DROP TABLE IF EXISTS house;
+CREATE TABLE house (
+id int NOT NULL AUTO_INCREMENT,
+elevator bool,
+gym bool,
+sauna bool,
+storage_room bool,
+construction_date varchar(16),
+address varchar(20),
+postal_code varchar(10),
+city varchar (20),
+  PRIMARY KEY (`id`)
+);
+
+DROP TABLE IF EXISTS apartment;
+CREATE TABLE apartment(
+id int NOT NULL AUTO_INCREMENT,
+house_number int,
+size double,
+rooms int,
+rent double,
+balcony bool,
+floor int,
+fridge varchar(16),
+freezer varchar(16),
+stove varchar(16),
+bofond double,
+notes varchar (200),
+
+  PRIMARY KEY (`id`)
+);
+
+
+
+
+DROP TABLE IF EXISTS _admin;
+CREATE TABLE _admin(
+id int NOT NULL AUTO_INCREMENT,
+_username varchar(100),
+_password varchar(100),
+  PRIMARY KEY (`id`)
+);
+
+Insert into _admin (_username, _password) values ('64719968103C9DDAA665F454B21718B9919CD97403297DFF031A260D891EC5C3' , '64719968103C9DDAA665F454B21718B9919CD97403297DFF031A260D891EC5C3');
+Insert into _admin (_username, _password) values ('109784250DF02EED45F9DF658A7E94A6330FE4FD779C313B1FD2B89B0D50BFF7' , '109784250DF02EED45F9DF658A7E94A6330FE4FD779C313B1FD2B89B0D50BFF7');
+
+
+insert into house (elevator, gym, sauna, storage_room, construction_date, address, postal_code, city) values (false, false, false,true,'2007-01-01', 'Hagaplan 12a', '974 41', 'Gävle');
+insert into house (elevator, gym, sauna, storage_room, construction_date, address, postal_code, city) values (true, true, true,true,'2016-03-12', 'Sandgatan 7b', '974 42', 'Luleå');
+insert into house (elevator, gym, sauna, storage_room, construction_date, address, postal_code, city) values (true, false, true,true,'2017-05-20', 'Kronvägen 88', '974 43', 'Kalmar');
+
+
+
+insert into apartment (house_number, size, rooms, rent, balcony, floor, fridge, freezer, stove, bofond, notes) values (1, 42, 2, 2800,false, 1,'2009-03-20','2009-03-20', '2009-03-20', 7000,'inga anteckningar');
+insert into apartment (house_number, size, rooms, rent, balcony, floor, fridge, freezer, stove, bofond, notes) values (1, 35, 1, 2500, false, 1,'2009-03-20','2009-03-20', '2009-03-20', 7000,'inga anteckningar');
+insert into apartment (house_number, size, rooms, rent, balcony, floor, fridge, freezer, stove, bofond, notes) values (1, 60, 2, 3000, false, 1,'2009-03-20','2009-03-20', '2009-03-20', 7000,'inga anteckningar');
+insert into apartment (house_number, size, rooms, rent, balcony, floor, fridge, freezer, stove, bofond, notes) values (1, 120, 4, 8000, false, 1,'2009-03-20','2009-03-20', '2009-03-20', 7000,'inga anteckningar');
+insert into apartment (house_number, size, rooms, rent, balcony, floor, fridge, freezer, stove, bofond, notes) values (1, 120, 4, 8000, true, 2,'2009-03-20','2009-03-20', '2009-03-20', 7000,'inga anteckningar');
+insert into apartment (house_number, size, rooms, rent, balcony, floor, fridge, freezer, stove, bofond, notes) values (1, 60, 2, 3000, true, 2,'2009-03-20','2009-03-20', '2009-03-20', 7000,'inga anteckningar');
+insert into apartment (house_number, size, rooms, rent, balcony, floor, fridge, freezer, stove, bofond, notes) values (1, 60, 2, 3000, true, 2,'2009-03-20','2009-03-20', '2009-03-20', 7000,'inga anteckningar');
+insert into apartment (house_number, size, rooms, rent, balcony, floor, fridge, freezer, stove, bofond, notes) values (1, 120, 4, 8000, true, 2,'2009-03-20','2009-03-20', '2009-03-20', 7000,'inga anteckningar');
+insert into apartment (house_number, size, rooms, rent, balcony, floor, fridge, freezer, stove, bofond, notes) values (1, 120, 4, 8000, true, 3,'2009-03-20','2009-03-20', '2009-03-20', 7000,'inga anteckningar');
+insert into apartment (house_number, size, rooms, rent, balcony, floor, fridge, freezer, stove, bofond, notes) values (1, 60, 2, 3000, true, 3,'2009-03-20','2009-03-20', '2009-03-20', 7000,'inga anteckningar');
+
+insert into apartment (house_number, size, rooms, rent, balcony, floor, fridge, freezer, stove, bofond, notes) values (2, 44, 2, 3300,false, 1,'2009-03-20','2009-03-20', '2009-03-20', 7000,'inga anteckningar');
+insert into apartment (house_number, size, rooms, rent, balcony, floor, fridge, freezer, stove, bofond, notes) values (2, 30, 1, 2500, false, 1,'2009-03-20','2009-03-20', '2009-03-20', 7000,'inga anteckningar');
+insert into apartment (house_number, size, rooms, rent, balcony, floor, fridge, freezer, stove, bofond, notes) values (2, 60, 2, 4000, false, 1,'2009-03-20','2009-03-20', '2009-03-20', 7000,'inga anteckningar');
+insert into apartment (house_number, size, rooms, rent, balcony, floor, fridge, freezer, stove, bofond, notes) values (2, 120, 4, 8000, false, 1,'2009-03-20','2009-03-20', '2009-03-20', 7000,'inga anteckningar');
+insert into apartment (house_number, size, rooms, rent, balcony, floor, fridge, freezer, stove, bofond, notes) values (2, 120, 4, 8000, true, 2,'2009-03-20','2009-03-20', '2009-03-20', 7000,'inga anteckningar');
+insert into apartment (house_number, size, rooms, rent, balcony, floor, fridge, freezer, stove, bofond, notes) values (2, 60, 2, 4000, true, 2,'2009-03-20','2009-03-20', '2009-03-20', 7000,'inga anteckningar');
+insert into apartment (house_number, size, rooms, rent, balcony, floor, fridge, freezer, stove, bofond, notes) values (2, 60, 2, 4000, true, 2,'2009-03-20','2009-03-20', '2009-03-20', 7000,'inga anteckningar');
+insert into apartment (house_number, size, rooms, rent, balcony, floor, fridge, freezer, stove, bofond, notes) values (2, 120, 4, 8000, true, 2,'2009-03-20','2009-03-20', '2009-03-20', 7000,'inga anteckningar');
+insert into apartment (house_number, size, rooms, rent, balcony, floor, fridge, freezer, stove, bofond, notes) values (2, 120, 4, 8000, true, 3,'2009-03-20','2009-03-20', '2009-03-20', 7000,'inga anteckningar');
+insert into apartment (house_number, size, rooms, rent, balcony, floor, fridge, freezer, stove, bofond, notes) values (2, 60, 2, 4000, true, 3,'2009-03-20','2009-03-20', '2009-03-20', 7000,'inga anteckningar');
+
+insert into apartment (house_number, size, rooms, rent, balcony, floor, fridge, freezer, stove, bofond, notes) values (3, 48, 2, 4000,false, 1,'2009-03-20','2009-03-20', '2009-03-20', 7000,'inga anteckningar');
+insert into apartment (house_number, size, rooms, rent, balcony, floor, fridge, freezer, stove, bofond, notes) values (3, 35, 1, 3000, false, 1,'2009-03-20','2009-03-20', '2009-03-20', 7000,'inga anteckningar');
+insert into apartment (house_number, size, rooms, rent, balcony, floor, fridge, freezer, stove, bofond, notes) values (3, 60, 2, 6000, false, 1,'2009-03-20','2009-03-20', '2009-03-20', 7000,'inga anteckningar');
+insert into apartment (house_number, size, rooms, rent, balcony, floor, fridge, freezer, stove, bofond, notes) values (3, 105, 4, 10000, true, 2,'2009-03-20','2009-03-20', '2009-03-20', 7000,'inga anteckningar');
+insert into apartment (house_number, size, rooms, rent, balcony, floor, fridge, freezer, stove, bofond, notes) values (3, 64, 3, 6200, true, 2,'2009-03-20','2009-03-20', '2009-03-20', 7000,'inga anteckningar');
+insert into apartment (house_number, size, rooms, rent, balcony, floor, fridge, freezer, stove, bofond, notes) values (3, 60, 3, 6000, true, 2,'2009-03-20','2009-03-20', '2009-03-20', 7000,'inga anteckningar');
+insert into apartment (house_number, size, rooms, rent, balcony, floor, fridge, freezer, stove, bofond, notes) values (3, 60, 3, 6000, true, 3,'2009-03-20','2009-03-20', '2009-03-20', 7000,'inga anteckningar');
+insert into apartment (house_number, size, rooms, rent, balcony, floor, fridge, freezer, stove, bofond, notes) values (3, 95, 4, 8500, true, 3,'2009-03-20','2009-03-20', '2009-03-20', 7000,'inga anteckningar');
+insert into apartment (house_number, size, rooms, rent, balcony, floor, fridge, freezer, stove, bofond, notes) values (3, 63, 3, 6150, true, 4,'2009-03-20','2009-03-20', '2009-03-20', 7000,'inga anteckningar');
+insert into apartment (house_number, size, rooms, rent, balcony, floor, fridge, freezer, stove, bofond, notes) values (3, 95, 4, 8500, true, 4,'2009-03-20','2009-03-20', '2009-03-20', 7000,'inga anteckningar');
